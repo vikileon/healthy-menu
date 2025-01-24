@@ -1,11 +1,11 @@
 import React from 'react';
-import Home from './Home';
+import Home from './RecipesHome';
 import Cuisine from './Cuisine';
 import Searched from './Searched';
 import Recipe from './Recipe';
 import { Route, Routes } from 'react-router-dom';
 
-function Pages() {
+function RecipesPages() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
@@ -16,4 +16,4 @@ function Pages() {
     );
 };
 
-export default Pages;
+export default RecipesPages;

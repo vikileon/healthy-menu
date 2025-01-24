@@ -1,8 +1,8 @@
-import Veggie from "../components/Veggie";
-import Popular from "../components/Popular";
+import Veggie from "../recipes-components/Veggie";
+import Popular from "../recipes-components/Popular";
 import { motion } from 'framer-motion';
 
-function Home() {
+function RecipesHome() {
     return (
         <motion.div
           animate={{ opacity: 1 }}
@@ -16,4 +16,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default RecipesHome;
