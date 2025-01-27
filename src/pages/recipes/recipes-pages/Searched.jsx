@@ -16,15 +16,15 @@ function Searched() {
   };
 
   useEffect(() => {
-    getSearched(params.search);
-  }, [params.search]);
+    getSearched(params.name);
+  }, [params.name]);
 
   return (
     <Grid>
       {searchedRecipes.map((item) => {
         return (
           <Card key={item.id}>
-            <Link to={'/recipe/' + item.id}>
+            <Link to={'/recipes/recipe/' + item.id}>
               <img src={item.image} alt={item.title} />
               <h4>{item.title}</h4>
             </Link>

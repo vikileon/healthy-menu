@@ -6,19 +6,19 @@ import { NavLink } from 'react-router-dom';
 function Category() {
     return (
         <List>
-            <StyledLink to={'/cuisine/Italian'}>
+            <StyledLink to={'/recipes/Italian'}>
                 <FaPizzaSlice />
                 <h4>Italian</h4>
             </StyledLink>
-            <StyledLink to={'/cuisine/American'}>
+            <StyledLink to={'/recipes/American'}>
                 <FaHamburger />
                 <h4>American</h4>
             </StyledLink>
-            <StyledLink to={'/cuisine/Thai'}>
+            <StyledLink to={'/recipes/Thai'}>
                 <GiNoodles />
                 <h4>Thai</h4>
             </StyledLink>
-            <StyledLink to={'/cuisine/Japanese'}>
+            <StyledLink to={'/recipes/Japanese'}>
                 <GiChopsticks />
                 <h4>Japanese</h4>
             </StyledLink>
@@ -57,7 +57,7 @@ const StyledLink = styled(NavLink)`
     }
 
     &.active {
-        background: linear-gradient(to right, #f27121, #e94057);
+        background: linear-gradient(to right,rgb(122, 176, 88),rgb(64, 134, 40));
 
         svg{
             color: white;

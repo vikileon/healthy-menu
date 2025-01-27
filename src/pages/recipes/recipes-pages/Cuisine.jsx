@@ -6,18 +6,20 @@ import { Link, useParams } from 'react-router-dom'
 function Cuisine() {
   const [cuisine, setCuisine] = useState([]);
   let params = useParams();
+  console.log(params);
 
   const getCuisine = async (name) => {
     const data = await fetch(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${import.meta.env.VITE_REACT_APP_API_KEY}&cuisine=${name}`
     );
     const recipes = await data.json();
+    console.log(recipes);
     setCuisine(recipes.results);
   };
 
   useEffect(() => {
-    getCuisine(params.type)
-  }, [params.type])
+    getCuisine(params.name)
+  }, [params.name])
 
   return (
     <Grid
@@ -29,7 +31,7 @@ function Cuisine() {
       {cuisine.map((item) => {
         return (
           <Card key={item.id}>
-            <Link to={'/recipe/' + item.id}>
+            <Link to={'/recipes/recipe/' + item.id}>
               <img src={item.image} alt={item.name} />
               <h4>{item.title}</h4>
             </Link>
