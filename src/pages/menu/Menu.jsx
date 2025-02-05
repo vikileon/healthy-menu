@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 function Menu() {
   return (
@@ -8,7 +8,7 @@ function Menu() {
       <p>Приношу извинения за неудобства :)</p>
     </Main>
   );
-};
+}
 
 const Main = styled.div`
   display: flex;
@@ -27,4 +27,4 @@ const Main = styled.div`
   }
 `;
 
-export default Menu
+export default Menu;
