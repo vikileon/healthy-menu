@@ -1,6 +1,6 @@
 import "./App.css";
-import Homepage from './pages/homepage/Homepage.jsx';
-import Footer from './components/footer/Footer.jsx';
+import Homepage from "./pages/homepage/Homepage.jsx";
+import Footer from "./components/footer/Footer.jsx";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Navbar from "./components/app-header/Navbar.jsx";
 import RecipesMain from "./pages/recipes/RecipesMain.jsx";
@@ -17,26 +17,26 @@ import Veggie from "./pages/recipes/recipes-components/Veggie.jsx";
 function App() {
   return (
     <BrowserRouter>
-      <div className='app'>
-      <Navbar />
+      <div className="app">
+        <Navbar />
         <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/recipes' element={<RecipesMain />}>
-            <Route index element={<Default />}/>
-            <Route path='/recipes/:name' element={<Cuisine />} />
-            <Route path='/recipes/recipe/:id' element={<Recipe />} />
-            <Route path='/recipes/recipe/:id' element={<Popular />} />
-            <Route path='/recipes/recipe/:id' element={<Veggie />} />
-            <Route path='/recipes/searched/:name' element={<Searched />}/>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/recipes" element={<RecipesMain />}>
+            <Route index element={<Default />} />
+            <Route path="/recipes/:name" element={<Cuisine />} />
+            <Route path="/recipes/recipe/:id" element={<Recipe />} />
+            <Route path="/recipes/recipe/:id" element={<Popular />} />
+            <Route path="/recipes/recipe/:id" element={<Veggie />} />
+            <Route path="/recipes/searched/:name" element={<Searched />} />
           </Route>
-          <Route path='/menu' element={<Menu />} />
-          <Route path='/shopping-list' element={<ShoppingList />} />
-          <Route path='/about' element={<About />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/shopping-list" element={<ShoppingList />} />
+          <Route path="/about" element={<About />} />
         </Routes>
-      <Footer />
+        <Footer />
       </div>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;

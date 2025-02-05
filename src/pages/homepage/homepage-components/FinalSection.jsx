@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function FinalSection() {
   return (
@@ -7,41 +8,65 @@ function FinalSection() {
       <Sections>
         <Section>
           <img src="../../../public/row1.png" alt="" />
-          <p className='primary-text'><b>Персонализированный план</b> на основе ваших целей и предпочтений.</p>
+          <Text>
+            <b>Персонализированный план</b> на основе ваших целей и
+            предпочтений.
+          </Text>
         </Section>
 
         <Section>
           <img src="../../../public/row2.png" alt="" />
-          <p className='primary-text'><b>Подсчёт калорий и нутриентов</b>, чтобы каждый приём пищи приносил пользу.</p>
+          <Text>
+            <b>Подсчёт калорий и нутриентов</b>, чтобы каждый приём пищи
+            приносил пользу.
+          </Text>
         </Section>
 
         <Section>
           <img src="../../../public/row3.png" alt="" />
-          <p className='primary-text'><b>Экономия времени</b>: вы получите не только меню, но и список для покупки продуктов — быстро и просто!</p>
-          </Section>
+          <Text>
+            <b>Экономия времени</b>: вы получите не только меню, но и список для
+            покупки продуктов — быстро и просто!
+          </Text>
+        </Section>
       </Sections>
 
       <h2>Правильное питание, как оно должно быть — просто и вкусно!</h2>
-      <div className='primary-text'>Нужно просто <button className='special-button'>начать.</button></div>
+      <p>
+        Нужно просто <Link to="/recipes">начать</Link>.
+      </p>
     </Main>
   );
-};
+}
 
 const Main = styled.div`
+  color: #6a6a6a;
+
   h2 {
-    color: #6f994a;
+    color: #638943;
     font-size: 2rem;
     padding: 2rem 0;
   }
-`
+
+  p {
+    font-size: 1.5rem;
+  }
+`;
 const Sections = styled.div`
   position: relative;
   display: flex;
   grid-gap: 150px;
-`
+`;
 
 const Section = styled.div`
   position: relative;
-`
+`;
+
+const Text = styled.div`
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  max-width: 500px;
+  color: #6a6a6a;
+  margin: 1.5rem 0;
+`;
 
 export default FinalSection;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 function ShoppingList() {
   return (
@@ -8,7 +8,7 @@ function ShoppingList() {
       <p>Приношу извинения за неудобства :)</p>
     </Main>
   );
-};
+}
 
 const Main = styled.div`
   display: flex;

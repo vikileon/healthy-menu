@@ -11,7 +11,7 @@ function Homepage() {
       <InfoSection />
       <FinalSection />
     </div>
-  )
+  );
 }
 
 export default Homepage;
